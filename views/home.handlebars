@@ -1,0 +1,16 @@
+<h1>The Tech Blog</h1>
+{{#each posts as |post|}}
+<div>
+    <div>
+        <h2><a href="/post/{{post.id}}">{{post.title}}</a></h2>
+        <p>Posted by {{post.user.name}} on {{format_date post.date_created}}</p>
+    </div>
+    <p>{{post.description}}</p>
+</div>
+<div class="row mb-2">
+    <div class="col-md-8">
+        <h5>{{comment.title}}</h5>
+        <p>{{comment.description}}</p>
+    </div>
+</div>
+{{/each}}
